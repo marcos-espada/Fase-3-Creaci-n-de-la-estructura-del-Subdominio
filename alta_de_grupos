@@ -4,7 +4,7 @@ $domainComponent="dc="+$dominio+"
 
 $gruposCsv=Read-Host "GruposCSV:"
 
-$fichero = import-csv -Path $gruposCsv -delimiter :
+$fichero = import-csv -Path $gruposCsv -Delimiter :
 foreach($linea in $fichero)
 {
         $pathObject=$linea.Path+","+$domainComponent
